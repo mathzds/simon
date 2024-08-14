@@ -14,7 +14,7 @@ Router.get("/search", async (req, res) => {
     res.send(JSON.stringify(Response.data));
   } catch (err) {
     console.error(err);
-    res.status(500).send("Erro ao buscar dados");
+    res.status(500).send({ error: "Não foi possivel coletar os dados" });
   }
 });
 

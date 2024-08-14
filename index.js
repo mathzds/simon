@@ -7,9 +7,11 @@ import applicationCors from "./src/modules/applicationCors.js";
 
 import mainRouter from "./src/routes/mainRouter.js";
 import searchRouter from "./src/routes/searchRoute.js";
+import relasesRouter from "./src/routes/releasesRouter.js"
 
 Server.use("/", mainRouter);
 Server.use("/", searchRouter);
+Server.use('/', relasesRouter)
 
 Server.use(applicationCors)
 
