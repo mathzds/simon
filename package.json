@@ -1,0 +1,21 @@
+{
+  "name": "anrollapi",
+  "version": "1.0.0",
+  "description": "anroll api",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env index.js",
+    "dev": "nodemon --env-file=.env index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "hyper-express": "^6.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
