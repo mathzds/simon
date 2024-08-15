@@ -13,7 +13,7 @@ const getReleases = async (url) => {
 
     return JSON.parse(jsonData);
   } catch (err) {
-    throw new Error("Não foi possivel coletar os dados");
+    throw new Error("Não foi possível coletar os dados");
   }
 };
 
@@ -25,7 +25,7 @@ Router.get("/releases", async (req, res) => {
     res.send(JSON.stringify(Releases));
   } catch (err) {
     console.error(err);
-    res.status(500).send({ error: "Não foi possivel coletar os dados" });
+    res.status(500).send({ error: "Não foi possível coletar os dados" });
   }
 });
 
