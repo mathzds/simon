@@ -1,3 +1,15 @@
-node_modules
+# Node modules
+node_modules/
+
+# Logs
+logs/
+
+# Environment files
 .env
+
+# npm
 package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
