@@ -13,9 +13,10 @@ Router.get("/search", async (req, res) => {
     const data = Response.data;
 
     const updatedData = data.data.map((anime) => {
+      const typeAnime = anime.type === "anime" ? "animes" : "filmes";
       return {
         ...anime,
-        imageUrl: Controller.imagesThumbnail(anime.slug),
+        imageUrl: Controller.imagesThumbnail(typeAnime,anime.slug),
       };
     });
 
