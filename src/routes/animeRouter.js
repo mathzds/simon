@@ -22,8 +22,16 @@ Router.get("/anime", async (req, res) => {
     const query = req.query.q;
     const url = Controller.anime(query);
     const releases = await getAnime(url);
+    const episodesResponse = await Axios.get(
+      Controller.animeEpisodes(releases.id_serie, "1", "asc")
+    );
 
-    res.send(JSON.stringify(releases));
+    const result = {
+      ...releases,
+      episodes: episodesResponse.data,
+    };
+
+    res.send(JSON.stringify(result));
   } catch (err) {
     console.error(err);
     res.status(500).send({ error: "Não foi possível coletar os dados" });
