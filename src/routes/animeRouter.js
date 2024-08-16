@@ -2,14 +2,14 @@ import Hyper from "hyper-express";
 import Axios from "axios";
 
 import { Controller } from "../services/Anroll.js";
-import { extractDataFromHtml } from "../utils/test.js";
+import { extractAnimeData } from "../utils/extrasFunctions.js";
 
 const Router = new Hyper.Router();
 
 const getAnime = async (url) => {
   try {
     const response = await Axios.get(url);
-    const jsonData = extractDataFromHtml(response.data);
+    const jsonData = extractAnimeData(response.data);
 
     return JSON.parse(jsonData);
   } catch (err) {
