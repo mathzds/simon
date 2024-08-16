@@ -20,10 +20,11 @@ const getAnime = async (url) => {
 Router.get("/anime", async (req, res) => {
   try {
     const query = req.query.q;
+    const page = req.query.p || "1";
     const url = Controller.anime(query);
     const releases = await getAnime(url);
     const episodesResponse = await Axios.get(
-      Controller.animeEpisodes(releases.id_serie, "1", "asc")
+      Controller.animeEpisodes(releases.id_serie, page, "asc")
     );
 
     const result = {
