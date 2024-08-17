@@ -3,6 +3,8 @@
 | **GET** | **/search**  | **?q=[string]** |
 | **GET** | **/releases**  |  |
 | **GET** | **/anime**  | **?q=[string]** |
+| **GET** | **/episode**  | **/[string]/[number]** |
+
 
 
 # Credits
