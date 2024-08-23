@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.4",
+    "glob": "^11.0.0",
     "hyper-express": "^6.16.4"
   }
 }
