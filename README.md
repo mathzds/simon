@@ -2,7 +2,7 @@
 | ------  | ------------ | --------------- |
 | **GET** | **/search**  | **?q=[string]** |
 | **GET** | **/releases**  |  |
-| **GET** | **/anime**  | **?q=[string]** |
+| **GET** | **/anime**  | **?q=[string]&p=[number]** |
 | **GET** | **/episode**  | **/[string]/[number]** |
 
 
